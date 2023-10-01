@@ -1,0 +1,37 @@
+CREATE TABLE users (
+  [id] UNIQUEIDENTIFIER NOT NULL DEFAULT NEWSEQUENTIALID() PRIMARY KEY,
+  [email] VARCHAR(255),
+  [password] VARCHAR(255),
+  [user_type_code] VARCHAR(5) NOT NULL,
+  [role] VARCHAR(50) NULL,
+  [created_utc] DATETIME NOT NULL DEFAULT GETUTCDATE(),
+  [updated_utc] DATETIME NOT NULL DEFAULT GETUTCDATE(),
+  [verified] bit NOT NULL DEFAULT 0,
+  [locked] [bit] NOT NULL DEFAULT 0,
+  [deleted] BIT NOT NULL DEFAULT 0,
+);
+CREATE TABLE [user_devices] (
+  [id] UNIQUEIDENTIFIER NOT NULL DEFAULT NEWSEQUENTIALID() PRIMARY KEY,
+  [device_token] NVARCHAR(500) NOT NULL,
+  [created_utc] DATETIME NOT NULL DEFAULT GETUTCDATE(),
+  [updated_utc] DATETIME NOT NULL DEFAULT GETUTCDATE(),
+  [user_id] UNIQUEIDENTIFIER FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE [user_types] (
+  [code] VARCHAR(2) not null PRIMARY KEY,
+  [name] NVARCHAR(255) not null,
+  [created_utc] DATETIME NOT NULL DEFAULT GETUTCDATE(),
+  [updated_utc] DATETIME NOT NULL DEFAULT GETUTCDATE(),
+  CONSTRAINT uc_user_type_name UNIQUE (name)
+);
+Create table[user_details](
+  [id] UNIQUEIDENTIFIER NOT NULL DEFAULT NEWSEQUENTIALID() PRIMARY KEY,
+  [phone_number] VARCHAR(20),
+  [first_name] NVARCHAR(255),
+  [middle_name] NVARCHAR(255),
+  [last_name] NVARCHAR(255),
+  [address] NVARCHAR(255),
+  [avatar] NTEXT,
+  [user_id] UNIQUEIDENTIFIER FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);

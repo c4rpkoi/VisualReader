@@ -1,0 +1,13 @@
+version: "3"
+services:
+  dictionary-service:
+    # replace username/repo:tag with your name and image details
+    build: 
+      context: .
+      dockerfile: Dockerfile
+  dictionary-migration:
+    # replace username/repo:tag with your name and image details
+    build: 
+      context: .
+      dockerfile: Dockerfile-migration
+    
