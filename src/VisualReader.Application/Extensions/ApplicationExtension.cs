@@ -22,6 +22,7 @@ namespace VisualReader.Application.Extensions
             serviceCollection.AddScoped<INotificationService, NotificationService>();
             serviceCollection.AddScoped<IUserContext, UserContext>();
             serviceCollection.AddScoped<IUserService, UserService>();
+            serviceCollection.AddScoped<ICommentService, CommentService>();
 
             serviceCollection.AddSingleton<CacheOptions>(service =>
             {

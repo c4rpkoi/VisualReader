@@ -34,4 +34,8 @@
 
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Comments\Validations\" />
+  </ItemGroup>
+
 </Project>

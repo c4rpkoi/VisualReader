@@ -20,3 +20,12 @@ if not exists (select 1 from users where email = 'admin')
 if not exists (select 1 from user_details where user_id = @userId)
 	INSERT INTO user_details (id,phone_number,first_name,middle_name,last_name,address,avatar, user_id)
 	VALUES (NEWID(), '0000000000', 'Administrator', null , 'Account', 'System', null, @userId);
+if not exists (select 1 from book where id = 'ea1f8b2c-bfaa-40f4-ac6f-1b7c59622702')
+    INSERT INTO book (id)
+    VALUES ('ea1f8b2c-bfaa-40f4-ac6f-1b7c59622702');
+if not exists (select 1 from post where id = '1f768165-1c27-4363-b143-c479b11151f9')
+    INSERT INTO post (id)
+    VALUES ('1f768165-1c27-4363-b143-c479b11151f9');
+if not exists (select 1 from chapter where id = '16f7b8f3-07f2-48b4-ade6-8cda8c74e027')
+    INSERT INTO chapter (id)
+    VALUES ('16f7b8f3-07f2-48b4-ade6-8cda8c74e027');

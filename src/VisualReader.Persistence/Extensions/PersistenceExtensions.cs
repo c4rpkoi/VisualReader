@@ -19,9 +19,10 @@ namespace VisualReader.Persistence.Extension
             });
 
             serviceCollection.AddMemoryCache();
-
+            
             //serviceCollection.AddScoped<IDictionaryRepository, DictionaryRepository>();
             serviceCollection.AddScoped<IUserRepository, UserRepository>();
+            serviceCollection.AddScoped<ICommentRepository, CommentRepository>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }

@@ -3,6 +3,7 @@
     public interface IUnitOfWork
     {
         //IDictionaryRepository Dictionaries { get; }
+        ICommentRepository Comments { get; }
         IUserRepository Users { get; }
 
         Task BeginTransactionAsync();

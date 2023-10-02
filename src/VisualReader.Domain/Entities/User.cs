@@ -13,6 +13,8 @@
         public bool Locked { get; set; }
         public bool Deleted { get; set; }
         public UserDetail UserDetail { get; set; }
+        public IEnumerable<Comment> Comments { get; set; }
+
 
         public User()
         {
