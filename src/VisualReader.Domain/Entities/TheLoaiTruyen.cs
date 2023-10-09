@@ -8,20 +8,16 @@ using System.Threading.Tasks;
 
 namespace VisualReader.Domain.Entities
 {
-    public class Chapter:IEntity<Guid>
+    [Table("TheLoaiTruyen")]
+    public class TheLoaiTruyen
     {
         [Key]
         public Guid ID { get; set; }
         public Guid TruyenID { get; set; }
-        public Guid LoaiTruyenCuaTruyenID { get; set; }
-        public float Ma { get; set; }
-        public DateTime NgayDang { get; set; }
-        public int LuotXem { get; set; }
+        public Guid TheLoaiID { get; set; }
         public DateTime CreatedUtc { get; set; }
         public DateTime UpdatedUtc { get; set; }
-        public ChapterData ChapterData { get; }
-        public LoaiTruyenCuaTruyen LoaiTruyenCuaTruyen { get; }
-        public Guid Id { get; set; }
-        public IEnumerable<Comment> Comments { get; set; }
+        public Truyen Truyen { get; }
+        public TheLoai TheLoai { get; }
     }
 }
