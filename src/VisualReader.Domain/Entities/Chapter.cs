@@ -10,7 +10,6 @@ namespace VisualReader.Domain.Entities
 {
     public class Chapter:IEntity<Guid>
     {
-        [Key]
         public Guid ID { get; set; }
         public Guid TruyenID { get; set; }
         public Guid LoaiTruyenCuaTruyenID { get; set; }
@@ -21,7 +20,6 @@ namespace VisualReader.Domain.Entities
         public DateTime UpdatedUtc { get; set; }
         public ChapterData ChapterData { get; }
         public LoaiTruyenCuaTruyen LoaiTruyenCuaTruyen { get; }
-        public Guid Id { get; set; }
         public IEnumerable<Comment> Comments { get; set; }
     }
 }
