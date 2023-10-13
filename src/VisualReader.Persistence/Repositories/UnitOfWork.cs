@@ -8,16 +8,18 @@ namespace VisualReader.Persistence.Repositories
     {
         //public IDictionaryRepository Dictionaries { get; private set; }
         public IUserRepository Users { get; private set; }
+        public ICommentRepository Comments { get; private set; }
 
         protected VisualReaderDbContext Context { get; private set; }
 
         private IDbContextTransaction _transaction;
 
-        public UnitOfWork(VisualReaderDbContext context/*, IDictionaryRepository dictionaryRepository*/, IUserRepository userRepository)
+        public UnitOfWork(VisualReaderDbContext context/*, IDictionaryRepository dictionaryRepository*/, IUserRepository userRepository, ICommentRepository commentRepository)
         {
             Context = context;
             //Dictionaries = dictionaryRepository;
             Users = userRepository;
+            Comments = commentRepository;
         }
 
         public async Task BeginTransactionAsync()

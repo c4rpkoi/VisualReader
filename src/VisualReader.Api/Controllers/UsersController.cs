@@ -6,7 +6,7 @@ using VisualReader.Application.Users.Commands;
 namespace VisualReader.Api.Controllers
 {
     [ApiController]
-    [Route("dct/[controller]")]
+    [Route("vsr/[controller]")]
     public class UsersController : ControllerBase
     {
         private readonly IMediator _mediator;
