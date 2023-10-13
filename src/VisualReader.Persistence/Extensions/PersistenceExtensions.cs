@@ -24,6 +24,8 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<IUserRepository, UserRepository>();
             serviceCollection.AddScoped<ICommentRepository, CommentRepository>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            serviceCollection.AddScoped<ITruyenManagerRepository, TruyenManagerRepository>();
         }
     }
 }
