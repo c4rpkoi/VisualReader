@@ -17,9 +17,10 @@ namespace VisualReader.Persistence.Configurations
             builder.ToTable("ChapterData");
             builder.HasKey(c => c.ID);
             builder.Property(c => c.Ma).HasColumnName("Ma");
+            builder.Property(c => c.STT).HasColumnName("STT");
             builder.Property(c => c.ChapterID).HasColumnName("ChapterID");
-            builder.Property(c => c.DataText).HasColumnName("DataText");
-            builder.Property(c => c.DataImg).HasColumnName("DataImg");
+            builder.Property(c => c.Data).HasColumnName("Data");
+            builder.Property(c => c.DataType).HasColumnName("DataType");
             builder.Property(c => c.CreatedUtc).HasColumnName("CreatedUtc");
             builder.Property(c => c.UpdatedUtc).HasColumnName("UpdatedUtc");
         }
