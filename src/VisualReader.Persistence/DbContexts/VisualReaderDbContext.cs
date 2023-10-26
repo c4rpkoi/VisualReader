@@ -14,7 +14,11 @@ namespace VisualReader.Persistence.Context
         public DbSet<Chapter> Chapters { get; set; }
 
         public DbSet<UserDetail> UserDetails { get; set; }
-
+        public DbSet<Bookmark> Bookmarks { get; set; }
+        public DbSet<Block> Blocks { get; set; }
+        public DbSet<FavoriteList>  FavoriteLists { get; set; }
+        public DbSet<ReadingList>  ReadingLists { get; set; }
+        public DbSet<ReadingLsistItem>  ReadingLsistItems { get; set; }
         public VisualReaderDbContext(DbContextOptions<VisualReaderDbContext> options) : base(options)
         {
         }
@@ -25,6 +29,11 @@ namespace VisualReader.Persistence.Context
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserDetailConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());
+            modelBuilder.ApplyConfiguration(new BlockConfiguration());
+            modelBuilder.ApplyConfiguration(new BookmarkConfiguration());
+            modelBuilder.ApplyConfiguration(new ReadingListCongiguration());
+            modelBuilder.ApplyConfiguration(new ReadingListItemCongiguration());
+            modelBuilder.ApplyConfiguration(new FavorietListContiguration());
         }
     }
 }
