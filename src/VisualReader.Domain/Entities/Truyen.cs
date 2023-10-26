@@ -16,8 +16,10 @@ namespace VisualReader.Domain.Entities
         public string Ma { get; set; }
         public string TenTruyen { get; set; }
         public byte[] AnhBia { get; set; }
+        public int AgeRatting { get; set; }
         public int TinhTrang { get; set; }
         public int LuotXem { get; set; }
+        public int LuotDanhGia { get; set; }
         public int SoLuongTheoDoi { get; set; }
         public float XepHang { get; set; }
         public string NoiDung { get; set; }

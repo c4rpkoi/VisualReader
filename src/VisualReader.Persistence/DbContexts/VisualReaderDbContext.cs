@@ -14,6 +14,7 @@ namespace VisualReader.Persistence.Context
         public DbSet<Chapter> Chapters { get; set; }
 
         public DbSet<UserDetail> UserDetails { get; set; }
+        public DbSet<BaiViet> BaiViets { get; set; }
 
         public VisualReaderDbContext(DbContextOptions<VisualReaderDbContext> options) : base(options)
         {
@@ -25,6 +26,7 @@ namespace VisualReader.Persistence.Context
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserDetailConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());
+            modelBuilder.ApplyConfiguration(new BaiVietConfiguration());
         }
     }
 }
