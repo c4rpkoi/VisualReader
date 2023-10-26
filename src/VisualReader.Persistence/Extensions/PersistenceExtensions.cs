@@ -25,7 +25,13 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<ICommentRepository, CommentRepository>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            serviceCollection.AddScoped<ITruyenManagerRepository, TruyenManagerRepository>();
+            serviceCollection.AddScoped<ITruyenManagerRepository, TruyenManagerRepository>(); 
+            
+            serviceCollection.AddScoped<IBookmarkRepository, BookmarkRepository>();
+            serviceCollection.AddScoped<IBlockRepository, BlockRepository>();
+            serviceCollection.AddScoped<IDsQuanTamRepository, DsQuanTamRepository>();
+            serviceCollection.AddScoped<IDsDangDocRepository, DsDangDocRepository>();
+            serviceCollection.AddScoped<IDsDaDocRepository, DsDaDocRepository>();
         }
     }
 }

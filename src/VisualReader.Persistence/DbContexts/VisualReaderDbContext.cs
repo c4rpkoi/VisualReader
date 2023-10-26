@@ -14,7 +14,11 @@ namespace VisualReader.Persistence.Context
         public DbSet<Chapter> Chapters { get; set; }
 
         public DbSet<UserDetail> UserDetails { get; set; }
-
+        public DbSet<Bookmark> Bookmarks { get; set; }
+        public DbSet<Block> Blocks { get; set; }
+        public DbSet<DsQuanTam> DsQuanTams { get; set; }
+        public DbSet<DsDangDoc> DsDangDocs { get; set; }
+        public DbSet<DsDaDoc> DsDaDocs { get; set; }
         public VisualReaderDbContext(DbContextOptions<VisualReaderDbContext> options) : base(options)
         {
         }
