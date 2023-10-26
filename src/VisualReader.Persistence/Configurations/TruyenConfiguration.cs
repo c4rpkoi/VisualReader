@@ -18,8 +18,10 @@ namespace VisualReader.Persistence.Configurations
             builder.Property(c => c.Ma).HasColumnName("Ma");
             builder.Property(c => c.TenTruyen).HasColumnName("TenTruyen");
             builder.Property(c => c.AnhBia).HasColumnName("AnhBia");
+            builder.Property(c => c.AgeRatting).HasColumnName("AgeRatting");
             builder.Property(c => c.TinhTrang).HasColumnName("TinhTrang");
             builder.Property(c => c.LuotXem).HasColumnName("LuotXem");
+            builder.Property(c => c.LuotDanhGia).HasColumnName("LuotDanhGia");
             builder.Property(c => c.SoLuongTheoDoi).HasColumnName("SoLuongTheoDoi");
             builder.Property(c => c.XepHang).HasColumnName("XepHang");
             builder.Property(c => c.NoiDung).HasColumnName("NoiDung");
