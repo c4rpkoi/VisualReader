@@ -16,8 +16,10 @@ namespace VisualReader.Domain.Entities
         public string Ma { get; set; }
         public string TenTruyen { get; set; }
         public byte[] AnhBia { get; set; }
+        public int AgeRatting { get; set; }
         public int TinhTrang { get; set; }
         public int LuotXem { get; set; }
+        public int LuotDanhGia { get; set; }
         public int SoLuongTheoDoi { get; set; }
         public float XepHang { get; set; }
         public string NoiDung { get; set; }
@@ -28,5 +30,9 @@ namespace VisualReader.Domain.Entities
         public List<LoaiTruyenCuaTruyen> LoaiTruyenCuaTruyens { get; }
         public List<TheLoaiTruyen> TheLoaiTruyens { get; }
         public List<TacGiaTruyen> TacGiaTruyens { get; }
+
+        public IEnumerable< DsDaDoc> DsDaDocs { get; set; }
+        public IEnumerable<Block> Blocks { get; set; }
+        public IEnumerable<DsQuanTam>   DsQuanTams { get; set; }
     }
 }
