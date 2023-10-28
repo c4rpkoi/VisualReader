@@ -24,7 +24,7 @@ namespace VisualReader.Persistence.Configurations
             builder.Property(x => x.UpdatedUtc).HasColumnName("updated_utc");
             builder.HasOne(x => x.User).WithMany(x => x.Comments).HasForeignKey(x => x.UserId);
             builder.HasOne(x => x.Chapter).WithMany(x => x.Comments).HasForeignKey(x => x.ChapterId);
-            builder.HasOne(x => x.Posts).WithMany(x => x.Comments).HasForeignKey(x => x.PostId);
+            //builder.HasOne(x => x.Posts).WithMany(x => x.Comments).HasForeignKey(x => x.PostId);
             builder.HasOne(x => x.Book).WithMany(x => x.Comments).HasForeignKey(x => x.BookId);
 
         }

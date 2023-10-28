@@ -30,5 +30,9 @@ namespace VisualReader.Domain.Entities
         public List<LoaiTruyenCuaTruyen> LoaiTruyenCuaTruyens { get; }
         public List<TheLoaiTruyen> TheLoaiTruyens { get; }
         public List<TacGiaTruyen> TacGiaTruyens { get; }
+
+        public IEnumerable< DsDaDoc> DsDaDocs { get; set; }
+        public IEnumerable<Block> Blocks { get; set; }
+        public IEnumerable<DsQuanTam>   DsQuanTams { get; set; }
     }
 }
