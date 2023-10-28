@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage;
 using VisualReader.Domain.Entities;
 using VisualReader.Persistence.Configurations;
 
@@ -16,13 +15,6 @@ namespace VisualReader.Persistence.Context
 
         public DbSet<UserDetail> UserDetails { get; set; }
 
-        public DbSet<Bookmark> Bookmarks { get; set; }
-        public DbSet<Block> Blocks { get; set; }
-        public DbSet<DsQuanTam> DsQuanTams { get; set; }
-        public DbSet<DsDangDoc> DsDangDocs { get; set; }
-        public DbSet<DsDaDoc> DsDaDocs { get; set; }
-
-
         public VisualReaderDbContext(DbContextOptions<VisualReaderDbContext> options) : base(options)
         {
         }
@@ -33,12 +25,6 @@ namespace VisualReader.Persistence.Context
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserDetailConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());
-            modelBuilder.ApplyConfiguration(new DsDaDocConfiguration());
-            modelBuilder.ApplyConfiguration(new DsDangDocCofiguration());
-            modelBuilder.ApplyConfiguration(new DsQuanTamConfiguraion());
-            modelBuilder.ApplyConfiguration(new BookmarkConfiguration());
-            modelBuilder.ApplyConfiguration(new BlockConfiguration());
-
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace VisualReader.Domain.Entities
 {
-    public class Chapter : IEntity<Guid>
+    public class Chapter:IEntity<Guid>
     {
         public Guid Id { get; set; }
         public Guid TruyenID { get; set; }
@@ -23,7 +23,5 @@ namespace VisualReader.Domain.Entities
         public ChapterData ChapterData { get; }
         public LoaiTruyenCuaTruyen LoaiTruyenCuaTruyen { get; }
         public IEnumerable<Comment> Comments { get; set; }
-
-        public List<Bookmark> Bookmarks { get; set; }
     }
 }

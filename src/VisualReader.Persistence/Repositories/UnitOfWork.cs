@@ -9,29 +9,17 @@ namespace VisualReader.Persistence.Repositories
         //public IDictionaryRepository Dictionaries { get; private set; }
         public IUserRepository Users { get; private set; }
         public ICommentRepository Comments { get; private set; }
-        public IBookmarkRepository  Bookmarks { get; private set; }
-        public IBlockRepository  Blocks { get; private set; }
-        public IDsDaDocRepository  DsDaDocs { get; private set; }
-        public IDsDangDocRepository  DsDangDocs { get; private set; }
-        public IDsQuanTamRepository  DsQuanTams { get; private set; }
-
-
 
         protected VisualReaderDbContext Context { get; private set; }
 
         private IDbContextTransaction _transaction;
 
-        public UnitOfWork(IUserRepository users, ICommentRepository comments, IBookmarkRepository bookmarks, IBlockRepository blocks, IDsDaDocRepository dsDaDocs, IDsDangDocRepository dsDangDocs, IDsQuanTamRepository dsQuanTams, VisualReaderDbContext context, IDbContextTransaction transaction)
+        public UnitOfWork(VisualReaderDbContext context/*, IDictionaryRepository dictionaryRepository*/, IUserRepository userRepository, ICommentRepository commentRepository)
         {
-            Users = users;
-            Comments = comments;
-            Bookmarks = bookmarks;
-            Blocks = blocks;
-            DsDaDocs = dsDaDocs;
-            DsDangDocs = dsDangDocs;
-            DsQuanTams = dsQuanTams;
             Context = context;
-            _transaction = transaction;
+            //Dictionaries = dictionaryRepository;
+            Users = userRepository;
+            Comments = commentRepository;
         }
 
         public async Task BeginTransactionAsync()
