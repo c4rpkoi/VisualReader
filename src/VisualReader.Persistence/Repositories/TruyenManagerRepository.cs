@@ -62,7 +62,7 @@ namespace VisualReader.Persistence.Repositories
                 if (chapter != null) return false;
                 else
                 {
-                    data.ID = Guid.NewGuid();
+                    data.Id = Guid.NewGuid();
                     _context.Add(data);
                     _context.SaveChanges();
                     return true;
@@ -109,7 +109,7 @@ namespace VisualReader.Persistence.Repositories
             if (data == null) return false;
             else
             {
-                var loaiTruyenCuaTruyen = _context.LoaiTruyenCuaTruyens.ToList().FirstOrDefault(c => c.LoaiTruyenID == data.LoaiTruyenID && c.TruyenID == data.TruyenID);
+                var loaiTruyenCuaTruyen = _context.LoaiTruyenCuaTruyen.ToList().FirstOrDefault(c => c.LoaiTruyenID == data.LoaiTruyenID && c.TruyenID == data.TruyenID);
 
                 if (loaiTruyenCuaTruyen != null) return false;
                 else
@@ -186,7 +186,7 @@ namespace VisualReader.Persistence.Repositories
                     dataTheLoai.Ma = data.Ma;
                     dataTheLoai.TenTheLoai = data.TenTheLoai;
                     dataTheLoai.Mota = data.Mota;
-                    dataTheLoai.CreatedUtc = data.CreatedUtc;
+                    dataTheLoai.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(dataTheLoai);
                     _context.SaveChanges();
                     return true;
@@ -204,7 +204,7 @@ namespace VisualReader.Persistence.Repositories
                 {
                     dataTacGia.Ma = data.Ma;
                     dataTacGia.TenTacGia = data.TenTacGia;
-                    dataTacGia.CreatedUtc = data.CreatedUtc;
+                    dataTacGia.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(data);
                     _context.SaveChanges();
                     return true;
@@ -216,13 +216,18 @@ namespace VisualReader.Persistence.Repositories
             if (data == null) return false;
             else
             {
-                var chapter = _context.Chapters.ToList().FirstOrDefault(c => c.ID == data.ID);
+                var chapter = _context.Chapters.ToList().FirstOrDefault(c => c.Id == data.Id);
                 if (chapter == null) return false;
                 else
                 {
+                    chapter.TruyenID = data.TruyenID;
+                    chapter.UserID = data.UserID;
+                    chapter.LoaiTruyenCuaTruyenID = data.LoaiTruyenCuaTruyenID;
+                    chapter.Title = data.Title;
                     chapter.Ma = data.Ma;
+                    chapter.NgayDang = data.NgayDang;
                     chapter.LuotXem = data.LuotXem;
-                    chapter.CreatedUtc = data.CreatedUtc;
+                    chapter.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(chapter);
                     _context.SaveChanges();
                     return true;
@@ -239,8 +244,11 @@ namespace VisualReader.Persistence.Repositories
                 if (chapterData == null) return false;
                 else
                 {
-                    chapterData.DataImg = data.DataImg;
-                    chapterData.DataText = data.DataText;
+                    chapterData.Ma = data.Ma;
+                    chapterData.STT = data.STT;
+                    chapterData.ChapterID = data.ChapterID;
+                    chapterData.Data = data.Data;
+                    chapterData.DataType = data.DataType;
                     chapterData.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(chapterData);
                     _context.SaveChanges();
@@ -261,7 +269,7 @@ namespace VisualReader.Persistence.Repositories
                     loaiTruyen.Ma = data.Ma;
                     loaiTruyen.TenTheLoai = data.TenTheLoai;
                     loaiTruyen.Mota = data.Mota;
-                    loaiTruyen.CreatedUtc = data.CreatedUtc;
+                    loaiTruyen.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(loaiTruyen);
                     _context.SaveChanges();
                     return true;
@@ -274,13 +282,13 @@ namespace VisualReader.Persistence.Repositories
             if (data == null) return false;
             else
             {
-                var loaiTruyenCuaTruyen = _context.LoaiTruyenCuaTruyens.ToList().FirstOrDefault(c => c.ID == data.ID);
+                var loaiTruyenCuaTruyen = _context.LoaiTruyenCuaTruyen.ToList().FirstOrDefault(c => c.ID == data.ID);
                 if (loaiTruyenCuaTruyen == null) return false;
                 else
                 {
                     loaiTruyenCuaTruyen.LoaiTruyenID = data.LoaiTruyenID;
                     loaiTruyenCuaTruyen.TruyenID = data.TruyenID;
-                    loaiTruyenCuaTruyen.CreatedUtc = data.CreatedUtc;
+                    loaiTruyenCuaTruyen.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(loaiTruyenCuaTruyen);
                     _context.SaveChanges();
                     return true;
@@ -299,7 +307,7 @@ namespace VisualReader.Persistence.Repositories
                 {
                     tacGiaTruyen.TacGiaID = data.TacGiaID;
                     tacGiaTruyen.TruyenID = data.TruyenID;
-                    tacGiaTruyen.CreatedUtc = data.CreatedUtc;
+                    tacGiaTruyen.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(tacGiaTruyen);
                     _context.SaveChanges();
                     return true;
@@ -318,7 +326,7 @@ namespace VisualReader.Persistence.Repositories
                 {
                     theLoaiTruyen.TruyenID = data.TruyenID;
                     theLoaiTruyen.TheLoaiID = data.TheLoaiID;
-                    theLoaiTruyen.CreatedUtc = data.CreatedUtc;
+                    theLoaiTruyen.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(theLoaiTruyen);
                     _context.SaveChanges();
                     return true;
@@ -337,9 +345,16 @@ namespace VisualReader.Persistence.Repositories
                 {
                     truyen.Ma = data.Ma;
                     truyen.TenTruyen = data.TenTruyen;
-                    truyen.TenTruyen = data.TenTruyen;
                     truyen.AnhBia = data.AnhBia;
-                    truyen.CreatedUtc = data.CreatedUtc;
+                    truyen.AgeRatting = data.AgeRatting;
+                    truyen.TinhTrang = data.TinhTrang;
+                    truyen.LuotXem = data.LuotXem;
+                    truyen.LuotDanhGia = data.LuotDanhGia;
+                    truyen.SoLuongTheoDoi = data.SoLuongTheoDoi;
+                    truyen.XepHang = data.XepHang;
+                    truyen.NoiDung = data.NoiDung;
+                    truyen.TrangThai = data.TrangThai;
+                    truyen.UpdatedUtc = data.UpdatedUtc;
                     _context.Update(truyen);
                     _context.SaveChanges();
                     return true;
@@ -356,7 +371,7 @@ namespace VisualReader.Persistence.Repositories
             if (data == null) return false;
             else
             {
-                var chapter = _context.Chapters.ToList().FirstOrDefault(c => c.ID == data.ID);
+                var chapter = _context.Chapters.ToList().FirstOrDefault(c => c.Id == data.Id);
                 if (chapter == null) return false;
                 else
                 {
@@ -404,7 +419,7 @@ namespace VisualReader.Persistence.Repositories
             if (data == null) return false;
             else
             {
-                var loaiTruyenCuaTruyen = _context.LoaiTruyenCuaTruyens.ToList().FirstOrDefault(c => c.ID == data.ID);
+                var loaiTruyenCuaTruyen = _context.LoaiTruyenCuaTruyen.ToList().FirstOrDefault(c => c.ID == data.ID);
                 if (loaiTruyenCuaTruyen == null) return false;
                 else
                 {
@@ -512,7 +527,7 @@ namespace VisualReader.Persistence.Repositories
         }
         public List<LoaiTruyenCuaTruyen> GetAll(LoaiTruyenCuaTruyen data)
         {
-            return _context.LoaiTruyenCuaTruyens.ToList();
+            return _context.LoaiTruyenCuaTruyen.ToList();
         }
         public List<TacGia> GetAll(TacGia data)
         {
@@ -539,7 +554,7 @@ namespace VisualReader.Persistence.Repositories
         #region Lay list theo ID
         public Chapter GetAllByID(Chapter data, Guid id)
         {
-            return _context.Chapters.ToList().FirstOrDefault(c => c.ID == id);
+            return _context.Chapters.ToList().FirstOrDefault(c => c.Id == id);
         }
         public ChapterData GetAllByID(ChapterData data, Guid id)
         {
@@ -551,7 +566,7 @@ namespace VisualReader.Persistence.Repositories
         }
         public LoaiTruyenCuaTruyen GetAllByID(LoaiTruyenCuaTruyen data, Guid id)
         {
-            return _context.LoaiTruyenCuaTruyens.ToList().FirstOrDefault(c => c.ID == id);
+            return _context.LoaiTruyenCuaTruyen.ToList().FirstOrDefault(c => c.ID == id);
         }
         public TacGia GetAllByID(TacGia data, Guid id)
         {
