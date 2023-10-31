@@ -14,7 +14,7 @@ namespace VisualReader.Persistence.Configurations
         public void Configure(EntityTypeBuilder<LoaiTruyenCuaTruyen> builder)
         {
             builder.ToTable("LoaiTruyenCuaTruyen");
-            builder.HasKey(c => c.ID);
+            builder.HasKey(c => c.Id);
             builder.Property(c=>c.LoaiTruyenID).HasColumnName("LoaiTruyenID");
             builder.Property(c=>c.TruyenID).HasColumnName("TruyenID");
             builder.Property(c=>c.CreatedUtc).HasColumnName("CreatedUtc");

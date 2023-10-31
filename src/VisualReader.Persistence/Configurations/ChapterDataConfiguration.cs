@@ -15,7 +15,7 @@ namespace VisualReader.Persistence.Configurations
         public void Configure(EntityTypeBuilder<ChapterData> builder)
         {
             builder.ToTable("ChapterData");
-            builder.HasKey(c => c.ID);
+            builder.HasKey(c => c.Id);
             builder.Property(c => c.Ma).HasColumnName("Ma");
             builder.Property(c => c.STT).HasColumnName("STT");
             builder.Property(c => c.ChapterID).HasColumnName("ChapterID");
