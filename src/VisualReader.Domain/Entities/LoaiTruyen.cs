@@ -10,10 +10,10 @@ namespace VisualReader.Domain.Entities
 {
 
     [Table("LoaiTruyen")]
-    public class LoaiTruyen
+    public class LoaiTruyen : IEntity<Guid>
     {
         [Key]
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
         public string Ma { get; set; }
         public string TenTheLoai { get; set; }
         public string Mota { get; set; }

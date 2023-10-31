@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace VisualReader.Domain.Entities
 {
     [Table("TheLoai")]
-    public class TheLoai
+    public class TheLoai : IEntity<Guid>
     {
         [Key]
-        public Guid ID { get; set; }
+        public Guid Id { get; set; }
         public string Ma { get; set; }
         public string TenTheLoai { get; set; }
         public string Mota { get; set; }
