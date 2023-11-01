@@ -25,7 +25,15 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<ICommentRepository, CommentRepository>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            serviceCollection.AddScoped<ITruyenManagerRepository, TruyenManagerRepository>();
+            serviceCollection.AddScoped<IChapterDataRepository, ChapterDataRepository>();
+            serviceCollection.AddScoped<IChapterRepository, ChapterRepositoty>();
+            serviceCollection.AddScoped<ILoaiTruyenRepository, LoaiTruyenRepository>();
+            serviceCollection.AddScoped<ILoaiTruyenCuaTruyenRepository, LoaiTruyenCuaTruyenRepository>();
+            serviceCollection.AddScoped<ITacGiaRepository, TacGiaRepository>();
+            serviceCollection.AddScoped<ITacGiaTruyenRepository, TacGiaTruyenRepository>();
+            serviceCollection.AddScoped<ITheLoaiRepository, TheLoaiRepository>();
+            serviceCollection.AddScoped<ITheLoaiTruyenRepository, TheLoaiTruyenRepository>();
+            serviceCollection.AddScoped<ITruyenRepository, TruyenRepository>();
         }
     }
 }

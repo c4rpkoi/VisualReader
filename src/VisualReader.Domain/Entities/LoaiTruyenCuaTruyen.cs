@@ -19,6 +19,6 @@ namespace VisualReader.Domain.Entities
         public DateTime UpdatedUtc { get; set; }
         public LoaiTruyen LoaiTruyen { get;  }
         public Truyen Truyen { get;  }
-        public List<Chapter> Chapters { get; }
+        public IEnumerable<Chapter> Chapters { get; }
     }
 }
