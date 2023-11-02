@@ -15,7 +15,10 @@
         public UserDetail UserDetail { get; set; }
         public IEnumerable<Comment> Comments { get; set; }
 
-
+        public IEnumerable<Block> Blocks { get; set; }
+        public List<Bookmark> Bookmarks { get; set; }
+        public ReadingList ReadingLists { get; set; }
+        public IEnumerable<FavoriteList> FavoriteLists { get; set; }
         public User()
         {
             Id = Guid.NewGuid();

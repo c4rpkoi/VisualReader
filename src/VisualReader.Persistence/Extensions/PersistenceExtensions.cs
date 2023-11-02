@@ -26,6 +26,13 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
 
             serviceCollection.AddScoped<ITruyenManagerRepository, TruyenManagerRepository>();
+
+            serviceCollection.AddScoped<IBookmarkRepository, BookmarkRepository>();
+            serviceCollection.AddScoped<IBlockRepository, BlockRepository>();
+            serviceCollection.AddScoped<IFavoriteListRepository, FavoriteListRepository>();
+            serviceCollection.AddScoped<IReadingListRepository, ReadingListRepository>();
+            serviceCollection.AddScoped<IReadingListItemRepository, ReadingListItemRepository>();
+
         }
     }
 }

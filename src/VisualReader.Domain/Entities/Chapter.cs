@@ -23,5 +23,6 @@ namespace VisualReader.Domain.Entities
         public ChapterData ChapterData { get; }
         public LoaiTruyenCuaTruyen LoaiTruyenCuaTruyen { get; }
         public IEnumerable<Comment> Comments { get; set; }
+        public List<Bookmark> Bookmarks { get; set; }
     }
 }

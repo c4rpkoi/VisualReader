@@ -14,12 +14,23 @@ namespace VisualReader.Persistence.Repositories
 
         private IDbContextTransaction _transaction;
 
-        public UnitOfWork(VisualReaderDbContext context/*, IDictionaryRepository dictionaryRepository*/, IUserRepository userRepository, ICommentRepository commentRepository)
+        public IBookmarkRepository Bookmark { get; private set; }
+        public IBlockRepository Block { get; private set; }
+        public IReadingListItemRepository ReadingListItem { get; private set; }
+        public IReadingListRepository ReadingList { get; private set; }
+        public IFavoriteListRepository FavoriteList { get; private set; }
+
+        public UnitOfWork(IUserRepository users, ICommentRepository comments, VisualReaderDbContext context, IDbContextTransaction transaction, IBookmarkRepository bookmark, IBlockRepository block, IReadingListItemRepository readingListItem, IReadingListRepository readingList, IFavoriteListRepository favoriteList)
         {
+            Users = users;
+            Comments = comments;
             Context = context;
-            //Dictionaries = dictionaryRepository;
-            Users = userRepository;
-            Comments = commentRepository;
+            _transaction = transaction;
+            Bookmark = bookmark;
+            Block = block;
+            ReadingListItem = readingListItem;
+            ReadingList = readingList;
+            FavoriteList = favoriteList;
         }
 
         public async Task BeginTransactionAsync()
