@@ -18,12 +18,10 @@ namespace VisualReader.Persistence.Repositories
         {
             _context = context;
         }
-
         public IQueryable<Bookmark> AsQueryable()
         {
             return base.AsQueryable();
         }
-
         protected override void Update(Bookmark requestObject, Bookmark targetObject)
         {
             throw new NotImplementedException();

@@ -16,7 +16,6 @@ namespace VisualReader.Persistence.Configurations
             builder.ToTable("readinglist");
             builder.Property(x => x.CreateUCT).HasColumnName("created_utc");
             builder.Property(x => x.UpdateUCT).HasColumnName("updated_utc");
-
             builder.HasOne(x => x.Users).WithOne(x => x.ReadingLists).HasForeignKey<ReadingList>(x => x.IdUser);
         }
     }

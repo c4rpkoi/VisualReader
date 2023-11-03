@@ -36,7 +36,6 @@ namespace VisualReader.Persistence.Context
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserDetailConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());
-            
             modelBuilder.ApplyConfiguration(new BlockConfiguration());
             modelBuilder.ApplyConfiguration(new BookmarkConfiguration());
             modelBuilder.ApplyConfiguration(new ReadingListCongiguration());

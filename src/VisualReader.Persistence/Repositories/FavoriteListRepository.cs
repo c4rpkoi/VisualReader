@@ -13,7 +13,6 @@ namespace VisualReader.Persistence.Repositories
     public class FavoriteListRepository : GenericRepository<FavoriteList, Guid>, IFavoriteListRepository
     {
         private readonly VisualReaderDbContext _context;
-
         public FavoriteListRepository(VisualReaderDbContext context) : base(context)
         {
             _context = context;
@@ -22,7 +21,6 @@ namespace VisualReader.Persistence.Repositories
         {
             return base.AsQueryable();
         }
-
         protected override void Update(FavoriteList requestObject, FavoriteList targetObject)
         {
             throw new NotImplementedException();
