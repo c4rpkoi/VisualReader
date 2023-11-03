@@ -17,7 +17,7 @@ namespace VisualReader.Domain.Entities
         public string TenTacGia { get; set; }
         public DateTime CreatedUtc { get; set; }
         public DateTime UpdatedUtc { get; set; }
-        public List<TacGiaTruyen> TacGiaTruyens { get; }
+        public IEnumerable<TacGiaTruyen> TacGiaTruyens { get; }
     }
 }
 

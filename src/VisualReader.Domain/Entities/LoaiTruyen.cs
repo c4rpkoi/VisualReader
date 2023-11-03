@@ -19,7 +19,7 @@ namespace VisualReader.Domain.Entities
         public string Mota { get; set; }
         public DateTime CreatedUtc { get; set; }
         public DateTime UpdatedUtc { get; set; }
-        public List<LoaiTruyenCuaTruyen> LoaiTruyenCuaTruyens { get;}
+        public IEnumerable<LoaiTruyenCuaTruyen> LoaiTruyenCuaTruyens { get;}
     }
     
 }

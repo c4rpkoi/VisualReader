@@ -27,8 +27,8 @@ namespace VisualReader.Domain.Entities
         public DateTime CreatedUtc { get; set; }
         public DateTime UpdatedUtc { get; set; }
 
-        public List<LoaiTruyenCuaTruyen> LoaiTruyenCuaTruyens { get; }
-        public List<TheLoaiTruyen> TheLoaiTruyens { get; }
-        public List<TacGiaTruyen> TacGiaTruyens { get; }
+        public IEnumerable<LoaiTruyenCuaTruyen> LoaiTruyenCuaTruyens { get; }
+        public IEnumerable<TheLoaiTruyen> TheLoaiTruyens { get; }
+        public IEnumerable<TacGiaTruyen> TacGiaTruyens { get; }
     }
 }

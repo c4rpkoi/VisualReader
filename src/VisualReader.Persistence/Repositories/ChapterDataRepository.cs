@@ -10,7 +10,7 @@ using VisualReader.Persistence.Context;
 
 namespace VisualReader.Persistence.Repositories
 {
-    public class ChapterDataRepository : GenericRepository<ChapterData,Guid>,IChapterRepository
+    public class ChapterDataRepository : GenericRepository<ChapterData,Guid>,IChapterDataRepository
     {
         private readonly VisualReaderDbContext _context;
         public ChapterDataRepository(VisualReaderDbContext context) : base(context)
