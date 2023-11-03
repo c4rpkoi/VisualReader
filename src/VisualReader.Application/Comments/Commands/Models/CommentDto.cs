@@ -34,7 +34,7 @@ namespace VisualReader.Application.Comments.Commands.Models
                     UpdatedUtc = entity.UpdatedUtc,
                     Content = entity.Content,
                     User = entity.User,
-                    Posts = entity.Posts,
+                    Posts = entity.Post,
                     Chapter=entity.Chapter,
                     Book=entity.Book
                 };
