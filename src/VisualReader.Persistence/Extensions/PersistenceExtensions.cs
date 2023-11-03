@@ -25,7 +25,7 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<ICommentRepository, CommentRepository>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
 
-<<<<<<< HEAD
+
 
             serviceCollection.AddScoped<IBookmarkRepository, BookmarkRepository>();
             serviceCollection.AddScoped<IBlockRepository, BlockRepository>();
@@ -33,7 +33,6 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<IReadingListRepository, ReadingListRepository>();
             serviceCollection.AddScoped<IReadingListItemRepository, ReadingListItemRepository>();
 
-=======
             serviceCollection.AddScoped<IChapterDataRepository, ChapterDataRepository>();
             serviceCollection.AddScoped<IChapterRepository, ChapterRepositoty>();
             serviceCollection.AddScoped<ILoaiTruyenRepository, LoaiTruyenRepository>();
@@ -43,7 +42,7 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<ITheLoaiRepository, TheLoaiRepository>();
             serviceCollection.AddScoped<ITheLoaiTruyenRepository, TheLoaiTruyenRepository>();
             serviceCollection.AddScoped<ITruyenRepository, TruyenRepository>();
->>>>>>> 6bd954113ba0624ff4fd00e950e03e63a255f3bf
+
         }
     }
 }
