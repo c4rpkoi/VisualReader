@@ -9,7 +9,6 @@ namespace VisualReader.Domain.Entities
     public class Bookmark : IEntity<Guid>
     {
         public Guid Id { get; set; }
-
         public Guid IdUser { get; set; }
         public Guid IdChapter { get; set; }
         public string PageIndex { get; set; }
