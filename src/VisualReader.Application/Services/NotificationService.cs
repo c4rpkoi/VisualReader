@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Text;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Application.Services
+namespace VisualReader
 {
     public class NotificationService : INotificationService
     {

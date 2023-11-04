@@ -2,9 +2,8 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Api.SystemCustomizes
+namespace VisualReader
 {
     public class SystemMiddleware
     {

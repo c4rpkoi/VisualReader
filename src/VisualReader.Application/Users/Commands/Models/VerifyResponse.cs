@@ -1,6 +1,4 @@
-﻿using VisualReader.Application.Models.Bases;
-
-namespace VisualReader.Application.Users.Commands.Models
+﻿namespace VisualReader
 {
     public class VerifyResponse : ResponseBase
     {

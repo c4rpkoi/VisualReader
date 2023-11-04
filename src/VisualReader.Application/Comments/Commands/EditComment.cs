@@ -1,18 +1,12 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Application.Comments.Commands.Models;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.Comments.Commands
+namespace VisualReader
 {
-    public class EditComment:IRequest<CommentDto>
+    public class EditComment : IRequest<CommentDto>
     {
         public Guid Id { get; set; }
+
         //public Guid? PostId { get; set; }
         //public Guid? ChapterId { get; set; }
         //public Guid? BookId { get; set; }
@@ -20,6 +14,7 @@ namespace VisualReader.Application.Comments.Commands
         //public DateTime CreatedUtc { get; set; }
         //public DateTime UpdatedUtc { get; set; }
         public string Content { get; set; }
+
         //public User? User { get; set; }
         //public Chapter? Chapter { get; set; }
         //public Book? Book { get; set; }
