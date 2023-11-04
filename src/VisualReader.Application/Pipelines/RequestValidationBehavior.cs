@@ -1,9 +1,8 @@
 ﻿using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using VisualReader.Application.Models.Errors;
 
-namespace VisualReader.Application.Pipelines
+namespace VisualReader
 {
     public class RequestValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {

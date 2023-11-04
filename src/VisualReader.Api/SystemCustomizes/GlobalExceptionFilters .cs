@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Diagnostics;
-using VisualReader.Application.Constants;
-using VisualReader.Application.Models.Errors;
 
-namespace VisualReader.Api.SystemCustomizes
+namespace VisualReader
 {
     public class GlobalExceptionFilters : ExceptionFilterAttribute
     {

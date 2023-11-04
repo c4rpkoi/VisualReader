@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Application.Comments.Commands;
-using VisualReader.Application.Comments.Commands.Models;
-using VisualReader.Application.Models.Bases;
-
-namespace VisualReader.Application.Services.Abstractions
+﻿namespace VisualReader
 {
     public interface ICommentService
     {
@@ -20,6 +11,5 @@ namespace VisualReader.Application.Services.Abstractions
         Task<CommentDto> EditCommentAsync(EditComment request, CancellationToken cancellationToken);// update 1 cmt
 
         Task<bool> RemoveCommentAsync(Guid Id, CancellationToken cancellationToken);// x
-
     }
 }

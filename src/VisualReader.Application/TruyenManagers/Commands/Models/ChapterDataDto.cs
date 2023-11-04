@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Domain.Entities;
+﻿using System.Linq.Expressions;
 
-namespace VisualReader.Application.TruyenManagers.Commands.Models
+namespace VisualReader
 {
     public class ChapterDataDto
     {

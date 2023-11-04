@@ -3,12 +3,8 @@ using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Pipelines;
-using VisualReader.Application.Services;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Application.Extensions
+namespace VisualReader
 {
     public static class ApplicationExtension
     {

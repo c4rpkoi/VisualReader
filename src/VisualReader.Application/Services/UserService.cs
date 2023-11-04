@@ -4,16 +4,8 @@ using System.Net;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
-using VisualReader.Application.Constants;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Models.Errors;
-using VisualReader.Application.Repositories;
-using VisualReader.Application.Services.Abstractions;
-using VisualReader.Application.Users.Commands;
-using VisualReader.Application.Users.Commands.Models;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.Services
+namespace VisualReader
 {
     public class UserService : IUserService
     {
