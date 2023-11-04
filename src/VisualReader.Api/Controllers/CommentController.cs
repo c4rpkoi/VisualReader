@@ -1,10 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using VisualReader.Application.Comments.Commands;
 
-namespace VisualReader.Api.Controllers
+namespace VisualReader
 {
     [ApiController]
     [Route("vsr/[controller]")]
@@ -57,6 +55,5 @@ namespace VisualReader.Api.Controllers
             var response = await _mediator.Send(command);
             return Ok(response);
         }
-
     }
 }

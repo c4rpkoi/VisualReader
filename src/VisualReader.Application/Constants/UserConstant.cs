@@ -1,4 +1,4 @@
-﻿namespace VisualReader.Application.Constants
+﻿namespace VisualReader
 {
     public class UserTypeConstant
     {

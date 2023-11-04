@@ -1,7 +1,6 @@
 ﻿using System.Linq.Expressions;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.Users.Commands.Models
+namespace VisualReader
 {
     /// <summary>
     /// chưa chuẩn cột trong database

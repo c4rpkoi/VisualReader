@@ -1,4 +1,4 @@
-﻿namespace VisualReader.Application.Services.Abstractions
+﻿namespace VisualReader
 {
     public interface ICacheService
     {
