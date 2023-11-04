@@ -1,13 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Persistence.Configurations
+namespace VisualReader
 {
     public class ReadingListCongiguration : IEntityTypeConfiguration<ReadingList>
     {

@@ -5,11 +5,8 @@ using Microsoft.OpenApi.Models;
 using Prometheus;
 using Prometheus.SystemMetrics;
 using System.Text;
-using VisualReader.Api.SystemCustomizes;
-using VisualReader.Application.Extensions;
-using VisualReader.Persistence.Extension;
 
-namespace VisualReader.Api
+namespace VisualReader
 {
     public class Startup
     {

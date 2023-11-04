@@ -1,4 +1,4 @@
-﻿namespace VisualReader.Application.Models.Bases
+﻿namespace VisualReader
 {
     public class ResponseBase
     {

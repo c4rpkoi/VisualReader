@@ -1,4 +1,4 @@
-﻿namespace VisualReader.Application.Users.Commands.Models
+﻿namespace VisualReader
 {
     public class GetProfileResponse
     {

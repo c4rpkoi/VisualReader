@@ -1,8 +1,6 @@
 ﻿using MediatR;
-using VisualReader.Application.Services.Abstractions;
-using VisualReader.Application.Users.Commands.Models;
 
-namespace VisualReader.Application.Users.Commands.Handlers
+namespace VisualReader
 {
     public class LoginRequestHandler : IRequestHandler<LoginRequest, LoginResponse>
     {

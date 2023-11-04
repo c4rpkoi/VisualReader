@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Users.Commands;
-using VisualReader.Application.Users.Commands.Models;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.Services.Abstractions
+namespace VisualReader
 {
     public interface IUserService
     {

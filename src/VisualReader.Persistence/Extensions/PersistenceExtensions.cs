@@ -1,11 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using VisualReader.Application.Repositories;
-using VisualReader.Persistence.Context;
-using VisualReader.Persistence.Repositories;
 
-namespace VisualReader.Persistence.Extension
+namespace VisualReader
 {
     public static class PersistenceExtensions
     {
@@ -21,8 +18,8 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddMemoryCache();
             //serviceCollection.AddScoped<IDictionaryRepository, DictionaryRepository>();
             serviceCollection.AddScoped<IUserRepository, UserRepository>();
-            serviceCollection.AddScoped<ICommentRepository, CommentRepository>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
+            serviceCollection.AddScoped<ICommentRepository, CommentRepository>();
             serviceCollection.AddScoped<IBookmarkRepository, BookmarkRepository>();
             serviceCollection.AddScoped<IBlockRepository, BlockRepository>();
             serviceCollection.AddScoped<IFavoriteListRepository, FavoriteListRepository>();
@@ -37,7 +34,7 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<ITheLoaiRepository, TheLoaiRepository>();
             serviceCollection.AddScoped<ITheLoaiTruyenRepository, TheLoaiTruyenRepository>();
             serviceCollection.AddScoped<ITruyenRepository, TruyenRepository>();
-
+            serviceCollection.AddScoped<IBaiVietReposytory, BaiVietRepository>();
         }
     }
 }

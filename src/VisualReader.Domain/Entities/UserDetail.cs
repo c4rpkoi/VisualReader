@@ -1,4 +1,4 @@
-﻿namespace VisualReader.Domain.Entities
+﻿namespace VisualReader
 {
     public class UserDetail : IEntity<Guid>
     {
