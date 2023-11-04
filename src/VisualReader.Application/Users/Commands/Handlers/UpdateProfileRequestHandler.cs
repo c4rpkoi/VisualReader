@@ -1,7 +1,6 @@
 ﻿using MediatR;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Application.Users.Commands.Handlers
+namespace VisualReader
 {
     public class UpdateProfileRequestHandler : IRequestHandler<UpdateProfileRequest, bool>
     {

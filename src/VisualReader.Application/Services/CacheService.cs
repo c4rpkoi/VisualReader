@@ -1,9 +1,7 @@
 ﻿using Newtonsoft.Json;
 using StackExchange.Redis;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Application.Services
+namespace VisualReader
 {
     public class CacheService : ICacheService
     {

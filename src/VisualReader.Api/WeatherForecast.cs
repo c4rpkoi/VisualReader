@@ -1,4 +1,4 @@
-namespace VisualReader.Api
+namespace VisualReader
 {
     public class WeatherForecast
     {

@@ -1,6 +1,4 @@
-﻿using VisualReader.Domain.Entities;
-
-namespace VisualReader.Application.Repositories
+﻿namespace VisualReader
 {
     public interface IUserDetailRepository : IRepository<UserDetail, Guid>
     {

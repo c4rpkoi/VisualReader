@@ -1,6 +1,4 @@
-﻿using VisualReader.Application.Constants;
-
-namespace VisualReader.Application.Models.Errors
+﻿namespace VisualReader
 {
     public class EntityNotFoundException : ErrorResponseMessage
     {

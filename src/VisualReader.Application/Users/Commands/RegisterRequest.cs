@@ -1,9 +1,7 @@
 ﻿using MediatR;
 using System.Linq.Expressions;
-using VisualReader.Application.Users.Commands.Models;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.Users.Commands
+namespace VisualReader
 {
     public class RegisterRequest : IRequest<RegisterResponse>
     {

@@ -1,13 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Persistence.Configurations
+namespace VisualReader
 {
     public class CommentConfiguration : IEntityTypeConfiguration<Comment>
     {
@@ -24,9 +18,8 @@ namespace VisualReader.Persistence.Configurations
             builder.Property(x => x.UpdatedUtc).HasColumnName("updated_utc");
             builder.HasOne(x => x.User).WithMany(x => x.Comments).HasForeignKey(x => x.UserId);
             builder.HasOne(x => x.Chapter).WithMany(x => x.Comments).HasForeignKey(x => x.ChapterId);
-            builder.HasOne(x => x.Posts).WithMany(x => x.Comments).HasForeignKey(x => x.PostId);
+            builder.HasOne(x => x.Post).WithMany(x => x.Comments).HasForeignKey(x => x.PostId);
             builder.HasOne(x => x.Book).WithMany(x => x.Comments).HasForeignKey(x => x.BookId);
-
         }
     }
 }

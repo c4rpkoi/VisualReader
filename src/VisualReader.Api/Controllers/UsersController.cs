@@ -1,9 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using VisualReader.Application.Users.Commands;
 
-namespace VisualReader.Api.Controllers
+namespace VisualReader
 {
     [ApiController]
     [Route("vsr/[controller]")]
