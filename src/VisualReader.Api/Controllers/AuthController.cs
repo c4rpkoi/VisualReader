@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Api.Controllers
+namespace VisualReader
 {
     public class AuthController : ControllerBase
     {

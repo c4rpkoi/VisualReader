@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace VisualReader.Api.Controllers
+namespace VisualReader
 {
     [ApiController]
     [Route("htc/[controller]")]

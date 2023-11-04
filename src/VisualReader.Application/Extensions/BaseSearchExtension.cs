@@ -1,9 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using VisualReader.Application.Constants;
-using VisualReader.Application.Models.Bases;
 
-namespace VisualReader.Application.Extensions
+namespace VisualReader
 {
     public static class BaseSearchExtension
     {

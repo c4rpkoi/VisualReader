@@ -1,4 +1,4 @@
-﻿namespace VisualReader.Domain.Entities
+﻿namespace VisualReader
 {
     public class User : IEntity<Guid>
     {
@@ -18,6 +18,7 @@
         public IEnumerable<Bookmark> Bookmarks { get; set; }
         public ReadingList ReadingLists { get; set; }
         public IEnumerable<FavoriteList> FavoriteLists { get; set; }
+
         public User()
         {
             Id = Guid.NewGuid();

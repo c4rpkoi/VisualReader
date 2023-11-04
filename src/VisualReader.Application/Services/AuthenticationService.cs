@@ -3,12 +3,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using VisualReader.Application.Constants;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Services.Abstractions;
-using VisualReader.Application.Users.Commands.Models;
 
-namespace VisualReader.Application.Services
+namespace VisualReader
 {
     public class AuthenticationService : IAuthenticationService
     {

@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Bookmarks\**" />
     <Compile Remove="Dictionary\**" />
+    <EmbeddedResource Remove="Bookmarks\**" />
     <EmbeddedResource Remove="Dictionary\**" />
+    <None Remove="Bookmarks\**" />
     <None Remove="Dictionary\**" />
   </ItemGroup>
 
@@ -39,8 +42,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Bookmarks\Commands\Handler\" />
     <Folder Include="Comments\Validations\" />
+    <Folder Include="ReadManagers\Blocks\Commands\Handlers\" />
+    <Folder Include="ReadManagers\Bookmarks\Commands\Handlers\" />
+    <Folder Include="ReadManagers\FavoriteLists\Commands\Handlers\" />
+    <Folder Include="ReadManagers\ReadingListItems\Commands\Handlers\" />
+    <Folder Include="ReadManagers\ReadingLists\Commands\Handlers\" />
     <Folder Include="TruyenManagers\Commands\Handlers\" />
     <Folder Include="TruyenManagers\Validations\" />
   </ItemGroup>
