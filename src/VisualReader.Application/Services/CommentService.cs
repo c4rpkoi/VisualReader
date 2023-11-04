@@ -1,19 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Application.Comments.Commands;
-using VisualReader.Application.Comments.Commands.Models;
-using VisualReader.Application.Constants;
-using VisualReader.Application.Extensions;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Models.Errors;
-using VisualReader.Application.Repositories;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Application.Services
+namespace VisualReader
 {
     public class CommentService : ICommentService
     {
@@ -45,11 +32,10 @@ namespace VisualReader.Application.Services
                 await _unitOfWork.CommitAsync();
             }
             catch (Exception ex)
-            {   
+            {
                 throw;
             }
             return CommentDto.Create(comment);
-
         }
 
         public async Task<CommentDto> EditCommentAsync(EditComment request, CancellationToken cancellationToken)
@@ -76,7 +62,6 @@ namespace VisualReader.Application.Services
                 throw;
             }
             return CommentDto.Create(comment);
-
         }
 
         public async Task<SearchResponse<CommentDto>> GetAllCommentAsync(GetCommentByParentId request, CancellationToken cancellationToken)
@@ -87,7 +72,6 @@ namespace VisualReader.Application.Services
                 .Include(x => x.User).OrderBy(x => x.CreatedUtc);
             var command = query.Select(x => CommentDto.Create(x));
             return await command.SearchAsync(request);
-
         }
 
         public async Task<CommentDto> GetCommentAsync(Guid id, CancellationToken cancellationToken)
@@ -98,7 +82,6 @@ namespace VisualReader.Application.Services
                 throw new EntityNotFoundException();
             }
             return CommentDto.Create(entity);
-
         }
 
         public async Task<bool> RemoveCommentAsync(Guid Id, CancellationToken cancellationToken)
@@ -119,7 +102,6 @@ namespace VisualReader.Application.Services
                 throw;
             }
             return true;
-
         }
     }
 }

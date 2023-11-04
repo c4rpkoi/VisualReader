@@ -1,13 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Persistence.Configurations
+namespace VisualReader
 {
     public class ChapterConfiguration : IEntityTypeConfiguration<Chapter>
     {
@@ -25,8 +19,6 @@ namespace VisualReader.Persistence.Configurations
             builder.Property(c => c.CreatedUtc).HasColumnName("CreatedUtc");
             builder.Property(c => c.UpdatedUtc).HasColumnName("UpdatedUtc");
             builder.HasOne(x => x.ChapterData).WithOne(x => x.Chapter).HasForeignKey<ChapterData>(x => x.ChapterID);
-
         }
-
     }
 }

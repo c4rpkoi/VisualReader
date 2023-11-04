@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VisualReader.Application.Repositories;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Persistence.Repositories
+namespace VisualReader
 {
     public abstract class GenericRepository<TModel, TKey> : IRepository<TModel, TKey> where TModel : class, IEntity<TKey> where TKey : IEquatable<TKey>
     {

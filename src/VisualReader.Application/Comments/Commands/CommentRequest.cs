@@ -1,16 +1,9 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Application.Comments.Commands.Models;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.Comments.Commands
+namespace VisualReader
 {
-    public class CommentRequest:IRequest<CommentDto>
+    public class CommentRequest : IRequest<CommentDto>
     {
         public Guid Id { get; set; }
         public Guid? PostId { get; set; }
@@ -41,7 +34,7 @@ namespace VisualReader.Application.Comments.Commands
                     UpdatedUtc = entity.UpdatedUtc,
                     Content = entity.Content,
                     User = entity.User,
-                    Posts = entity.Posts,
+                    Post = entity.Posts,
                     Chapter = entity.Chapter,
                     Book = entity.Book
                 };
@@ -56,6 +49,5 @@ namespace VisualReader.Application.Comments.Commands
             }
             return null;
         }
-
     }
 }

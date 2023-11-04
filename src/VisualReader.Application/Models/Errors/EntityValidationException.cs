@@ -1,7 +1,6 @@
 ﻿using FluentValidation.Results;
-using VisualReader.Application.Constants;
 
-namespace VisualReader.Application.Models.Errors
+namespace VisualReader
 {
     public class EntityValidationException : ErrorResponseMessage
     {

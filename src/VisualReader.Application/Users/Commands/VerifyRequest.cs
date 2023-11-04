@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace VisualReader.Application.Users.Commands
+namespace VisualReader
 {
     public class VerifyRequest : IRequest<bool>
     {

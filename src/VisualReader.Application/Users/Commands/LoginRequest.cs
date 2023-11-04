@@ -1,8 +1,6 @@
 ﻿using MediatR;
-using VisualReader.Application.Constants;
-using VisualReader.Application.Users.Commands.Models;
 
-namespace VisualReader.Application.Users.Commands
+namespace VisualReader
 {
     public class LoginRequest : IRequest<LoginResponse>
     {

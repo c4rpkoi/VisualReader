@@ -1,17 +1,9 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Application.Comments.Commands.Models;
-using VisualReader.Application.TruyenManagers.Commands.Models;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.TruyenManagers.Commands
+namespace VisualReader
 {
-    public class ChapterDataRequest: IRequest<ChapterDataDto>
+    public class ChapterDataRequest : IRequest<ChapterDataDto>
     {
         public Guid Id { get; set; }
         public string Ma { get; set; }
