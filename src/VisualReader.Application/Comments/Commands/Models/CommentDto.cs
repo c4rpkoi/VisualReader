@@ -1,7 +1,6 @@
 ﻿using System.Linq.Expressions;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.Comments.Commands.Models
+namespace VisualReader
 {
     public class CommentDto
     {
@@ -34,9 +33,9 @@ namespace VisualReader.Application.Comments.Commands.Models
                     UpdatedUtc = entity.UpdatedUtc,
                     Content = entity.Content,
                     User = entity.User,
-                    Posts = entity.Posts,
-                    Chapter=entity.Chapter,
-                    Book=entity.Book
+                    Posts = entity.Post,
+                    Chapter = entity.Chapter,
+                    Book = entity.Book
                 };
             }
         }
@@ -49,6 +48,5 @@ namespace VisualReader.Application.Comments.Commands.Models
             }
             return null;
         }
-
     }
 }

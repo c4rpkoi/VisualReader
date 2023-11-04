@@ -1,10 +1,8 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Http;
-using VisualReader.Application.Constants;
-using VisualReader.Application.Users.Commands;
 
-namespace VisualReader.Application.Users.Validations
+namespace VisualReader
 {
     public class ImageValidation : AbstractValidator<UpdateProfileRequest>
     {

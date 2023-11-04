@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 
-namespace VisualReader.Application.Users.Commands
+namespace VisualReader
 {
     public class UpdateProfileRequest : IRequest<bool>
     {

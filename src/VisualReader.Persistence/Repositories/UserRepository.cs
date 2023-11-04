@@ -1,8 +1,4 @@
-﻿using VisualReader.Application.Repositories;
-using VisualReader.Domain.Entities;
-using VisualReader.Persistence.Context;
-
-namespace VisualReader.Persistence.Repositories
+﻿namespace VisualReader
 {
     public class UserRepository : GenericRepository<User, Guid>, IUserRepository
     {

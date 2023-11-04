@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VisualReader.Domain.Entities
+﻿namespace VisualReader
 {
-    public class Comment:IEntity<Guid> //nhớ kế thừa cái ientity này
+    public class Comment : IEntity<Guid> //nhớ kế thừa cái ientity này
     {
         public Guid Id { get; set; }
         public Guid? PostId { get; set; }
@@ -20,6 +14,5 @@ namespace VisualReader.Domain.Entities
         public Chapter? Chapter { get; set; }
         public Book? Book { get; set; }
         public Post? Post { get; set; }
-
     }
 }

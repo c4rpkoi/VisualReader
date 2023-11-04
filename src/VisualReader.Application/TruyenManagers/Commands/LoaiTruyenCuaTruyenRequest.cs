@@ -1,17 +1,9 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Application.Comments.Commands.Models;
-using VisualReader.Application.TruyenManagers.Models;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Application.TruyenManagers.Commands
+namespace VisualReader
 {
-    public class LoaiTruyenCuaTruyenRequest: IRequest<LoaiTruyenCuaTruyenDto>
+    public class LoaiTruyenCuaTruyenRequest : IRequest<LoaiTruyenCuaTruyenDto>
     {
         public Guid Id { get; set; }
         public Guid LoaiTruyenID { get; set; }

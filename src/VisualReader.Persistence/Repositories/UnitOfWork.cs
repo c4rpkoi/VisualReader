@@ -1,14 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
-using VisualReader.Application.Repositories;
-using VisualReader.Domain.Entities;
-using VisualReader.Persistence.Context;
+using System.Collections.Generic;
 
-namespace VisualReader.Persistence.Repositories
+namespace VisualReader
 {
     public class UnitOfWork : IUnitOfWork
     {
         //public IDictionaryRepository Dictionaries { get; private set; }
         public IUserRepository Users { get; private set; }
+        public IBookmarkRepository Bookmark { get; private set; }
+        public IBlockRepository Block { get; private set; }
+        public IReadingListItemRepository ReadingListItem { get; private set; }
+        public IReadingListRepository ReadingList { get; private set; }
+        public IFavoriteListRepository FavoriteList { get; private set; }
         public ICommentRepository Comments { get; private set; }
         public IChapterDataRepository ChapterDatas { get; private set; }
         public IChapterRepository Chapters { get; private set; }
@@ -24,15 +27,14 @@ namespace VisualReader.Persistence.Repositories
 
         private IDbContextTransaction _transaction;
 
-        public IBookmarkRepository Bookmark { get; private set; }
-        public IBlockRepository Block { get; private set; }
-        public IReadingListItemRepository ReadingListItem { get; private set; }
-        public IReadingListRepository ReadingList { get; private set; }
-        public IFavoriteListRepository FavoriteList { get; private set; }
-
-        public UnitOfWork(IUserRepository users, ICommentRepository comments, IChapterDataRepository chapterDatas, IChapterRepository chapters, ILoaiTruyenRepository loaiTruyens, ILoaiTruyenCuaTruyenRepository loaiTruyenCuaTruyens, ITacGiaRepository tacGias, ITacGiaTruyenRepository tacGiaTruyens, ITheLoaiRepository theLoais, ITheLoaiTruyenRepository theLoaiTruyens, ITruyenRepository truyens, VisualReaderDbContext context, IDbContextTransaction transaction, IBookmarkRepository bookmark, IBlockRepository block, IReadingListItemRepository readingListItem, IReadingListRepository readingList, IFavoriteListRepository favoriteList)
+        public UnitOfWork(IUserRepository users, IBookmarkRepository bookmark, IBlockRepository block, IReadingListItemRepository readingListItem, IReadingListRepository readingList, IFavoriteListRepository favoriteList, ICommentRepository comments, IChapterDataRepository chapterDatas, IChapterRepository chapters, ILoaiTruyenRepository loaiTruyens, ILoaiTruyenCuaTruyenRepository loaiTruyenCuaTruyens, ITacGiaRepository tacGias, ITacGiaTruyenRepository tacGiaTruyens, ITheLoaiRepository theLoais, ITheLoaiTruyenRepository theLoaiTruyens, ITruyenRepository truyens, VisualReaderDbContext context)
         {
             Users = users;
+            Bookmark = bookmark;
+            Block = block;
+            ReadingListItem = readingListItem;
+            ReadingList = readingList;
+            FavoriteList = favoriteList;
             Comments = comments;
             ChapterDatas = chapterDatas;
             Chapters = chapters;
@@ -44,12 +46,6 @@ namespace VisualReader.Persistence.Repositories
             TheLoaiTruyens = theLoaiTruyens;
             Truyens = truyens;
             Context = context;
-            _transaction = transaction;
-            Bookmark = bookmark;
-            Block = block;
-            ReadingListItem = readingListItem;
-            ReadingList = readingList;
-            FavoriteList = favoriteList;
         }
 
         public async Task BeginTransactionAsync()

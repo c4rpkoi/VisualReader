@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VisualReader.Domain.Entities
+﻿namespace VisualReader
 {
-    public class Chapter:IEntity<Guid>
+    public class Chapter : IEntity<Guid>
     {
         public Guid Id { get; set; }
         public Guid TruyenID { get; set; }

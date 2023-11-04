@@ -1,4 +1,4 @@
-﻿namespace VisualReader.Application.Models.Errors
+﻿namespace VisualReader
 {
     public class ErrorResponseMessage : Exception
     {

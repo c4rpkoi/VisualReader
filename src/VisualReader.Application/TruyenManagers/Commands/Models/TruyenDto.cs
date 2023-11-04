@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Domain.Entities;
+﻿using System.Linq.Expressions;
 
-namespace VisualReader.Application.TruyenManagers.Commands.Models
+namespace VisualReader
 {
     public class TruyenDto
     {
@@ -45,12 +39,11 @@ namespace VisualReader.Application.TruyenManagers.Commands.Models
                     LuotXem = entity.LuotXem,
                     LuotDanhGia = entity.LuotDanhGia,
                     SoLuongTheoDoi = entity.SoLuongTheoDoi,
-                    XepHang= entity.XepHang,
+                    XepHang = entity.XepHang,
                     NoiDung = entity.NoiDung,
                     TrangThai = entity.TrangThai,
                     CreatedUtc = entity.CreatedUtc,
                     UpdatedUtc = entity.UpdatedUtc,
-
                 };
             }
         }

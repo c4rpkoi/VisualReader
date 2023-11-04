@@ -1,8 +1,6 @@
 ﻿using FluentValidation;
-using VisualReader.Application.Constants;
-using VisualReader.Application.Users.Commands;
 
-namespace VisualReader.Application.Users.Validations
+namespace VisualReader
 {
     public class RegisterValidation : AbstractValidator<RegisterRequest>
     {
