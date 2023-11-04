@@ -1,6 +1,4 @@
-﻿using VisualReader.Application.Services.Abstractions;
-
-namespace VisualReader.Application.Services
+﻿namespace VisualReader
 {
     public class UserContext : IUserContext
     {

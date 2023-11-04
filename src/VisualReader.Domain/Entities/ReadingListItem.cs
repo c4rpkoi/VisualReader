@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace VisualReader.Domain.Entities
+﻿namespace VisualReader
 {
     public class ReadingListItem : IEntity<Guid>
     {
@@ -16,7 +10,7 @@ namespace VisualReader.Domain.Entities
         public string PageIndex { get; set; }
         public DateTime CreateUCT { get; set; }
         public DateTime UpdateUCT { get; set; }
-        public ReadingList  ReadingLists { get; set; }
+        public ReadingList ReadingLists { get; set; }
         public Truyen Truyens { get; set; }
     }
 }

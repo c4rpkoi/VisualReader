@@ -1,14 +1,6 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Application.Comments.Commands.Models;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Application.Comments.Commands.Handlers
+namespace VisualReader
 {
     public class GetCommentByParentIdRequestHandler : IRequestHandler<GetCommentByParentId, SearchResponse<CommentDto>>
     {

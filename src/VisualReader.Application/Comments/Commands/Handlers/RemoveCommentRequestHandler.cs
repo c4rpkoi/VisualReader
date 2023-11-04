@@ -1,12 +1,6 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Application.Comments.Commands.Handlers
+namespace VisualReader
 {
     public class RemoveCommentRequestHandler : IRequestHandler<RemoveComment, bool>
     {
@@ -21,6 +15,5 @@ namespace VisualReader.Application.Comments.Commands.Handlers
         {
             return _service.RemoveCommentAsync(request.Id, cancellationToken);
         }
-
     }
 }

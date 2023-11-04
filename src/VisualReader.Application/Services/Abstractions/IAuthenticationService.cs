@@ -1,7 +1,4 @@
-﻿using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Users.Commands.Models;
-
-namespace VisualReader.Application.Services.Abstractions
+﻿namespace VisualReader
 {
     public interface IAuthenticationService
     {

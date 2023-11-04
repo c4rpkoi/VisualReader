@@ -1,4 +1,4 @@
-﻿namespace VisualReader.Domain.Entities
+﻿namespace VisualReader
 {
     public interface IEntity<T>
     {

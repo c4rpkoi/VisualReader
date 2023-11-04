@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Persistence.Configurations
+namespace VisualReader
 {
     public class UserDetailConfiguration : IEntityTypeConfiguration<UserDetail>
     {
