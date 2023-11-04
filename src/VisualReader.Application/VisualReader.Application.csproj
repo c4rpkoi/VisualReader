@@ -39,6 +39,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Bookmarks\Commands\Handler\" />
     <Folder Include="Comments\Validations\" />
     <Folder Include="TruyenManagers\Commands\Handlers\" />
     <Folder Include="TruyenManagers\Validations\" />

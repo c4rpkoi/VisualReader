@@ -19,12 +19,15 @@ namespace VisualReader.Persistence.Extension
             });
 
             serviceCollection.AddMemoryCache();
-            
             //serviceCollection.AddScoped<IDictionaryRepository, DictionaryRepository>();
             serviceCollection.AddScoped<IUserRepository, UserRepository>();
             serviceCollection.AddScoped<ICommentRepository, CommentRepository>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
-
+            serviceCollection.AddScoped<IBookmarkRepository, BookmarkRepository>();
+            serviceCollection.AddScoped<IBlockRepository, BlockRepository>();
+            serviceCollection.AddScoped<IFavoriteListRepository, FavoriteListRepository>();
+            serviceCollection.AddScoped<IReadingListRepository, ReadingListRepository>();
+            serviceCollection.AddScoped<IReadingListItemRepository, ReadingListItemRepository>();
             serviceCollection.AddScoped<IChapterDataRepository, ChapterDataRepository>();
             serviceCollection.AddScoped<IChapterRepository, ChapterRepositoty>();
             serviceCollection.AddScoped<ILoaiTruyenRepository, LoaiTruyenRepository>();
@@ -34,6 +37,7 @@ namespace VisualReader.Persistence.Extension
             serviceCollection.AddScoped<ITheLoaiRepository, TheLoaiRepository>();
             serviceCollection.AddScoped<ITheLoaiTruyenRepository, TheLoaiTruyenRepository>();
             serviceCollection.AddScoped<ITruyenRepository, TruyenRepository>();
+
         }
     }
 }
