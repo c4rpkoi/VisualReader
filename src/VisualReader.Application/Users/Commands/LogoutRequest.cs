@@ -1,7 +1,6 @@
 ﻿using MediatR;
-using VisualReader.Application.Models.Bases;
 
-namespace VisualReader.Application.Users.Commands
+namespace VisualReader
 {
     public class LogoutRequest : IRequest<ResponseBase>
     {

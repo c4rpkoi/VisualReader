@@ -1,8 +1,6 @@
 ﻿using MediatR;
-using VisualReader.Application.Models.Bases;
-using VisualReader.Application.Services.Abstractions;
 
-namespace VisualReader.Application.Users.Commands.Handlers
+namespace VisualReader
 {
     internal class LogoutRequestHandler : IRequestHandler<LogoutRequest, ResponseBase>
     {

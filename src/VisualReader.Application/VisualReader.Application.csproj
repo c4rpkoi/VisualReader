@@ -41,6 +41,12 @@
   <ItemGroup>
     <Folder Include="Bookmarks\Commands\Handler\" />
     <Folder Include="Comments\Validations\" />
+    <Folder Include="NewFolder\" />
+    <Folder Include="ReadManagers\Blocks\Commands\Handlers\" />
+    <Folder Include="ReadManagers\Bookmarks\Commands\Handlers\" />
+    <Folder Include="ReadManagers\FavoriteLists\Commands\Handlers\" />
+    <Folder Include="ReadManagers\ReadingListItems\Commands\Handlers\" />
+    <Folder Include="ReadManagers\ReadingLists\Commands\Handlers\" />
     <Folder Include="TruyenManagers\Commands\Handlers\" />
     <Folder Include="TruyenManagers\Validations\" />
   </ItemGroup>

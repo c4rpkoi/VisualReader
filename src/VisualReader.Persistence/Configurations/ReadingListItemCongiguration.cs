@@ -1,12 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Persistence.Configurations
+namespace VisualReader
 {
     public class ReadingListItemCongiguration : IEntityTypeConfiguration<ReadingListItem>
     {

@@ -1,13 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Domain.Entities;
 
-namespace VisualReader.Persistence.Configurations
+namespace VisualReader
 {
     public class TruyenConfiguration : IEntityTypeConfiguration<Truyen>
     {
@@ -28,9 +22,9 @@ namespace VisualReader.Persistence.Configurations
             builder.Property(c => c.TrangThai).HasColumnName("TrangThai");
             builder.Property(c => c.CreatedUtc).HasColumnName("CreatedUtc");
             builder.Property(c => c.UpdatedUtc).HasColumnName("UpdatedUtc");
-            builder.HasMany(c=>c.LoaiTruyenCuaTruyens).WithOne(c=>c.Truyen).HasForeignKey(c=>c.TruyenID);
-            builder.HasMany(c=>c.TacGiaTruyens).WithOne(c=>c.Truyen).HasForeignKey(c=>c.TruyenID);
-            builder.HasMany(c=>c.TheLoaiTruyens).WithOne(c=>c.Truyen).HasForeignKey(c=>c.TruyenID);
+            builder.HasMany(c => c.LoaiTruyenCuaTruyens).WithOne(c => c.Truyen).HasForeignKey(c => c.TruyenID);
+            builder.HasMany(c => c.TacGiaTruyens).WithOne(c => c.Truyen).HasForeignKey(c => c.TruyenID);
+            builder.HasMany(c => c.TheLoaiTruyens).WithOne(c => c.Truyen).HasForeignKey(c => c.TruyenID);
         }
     }
 }

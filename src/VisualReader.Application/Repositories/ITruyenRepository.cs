@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using VisualReader.Domain.Entities;
-
-namespace VisualReader.Application.Repositories
+﻿namespace VisualReader
 {
-    public interface  ITruyenRepository : IRepository<Truyen,Guid>
+    public interface ITruyenRepository : IRepository<Truyen, Guid>
     {
         IQueryable<Truyen> AsQueryable();
     }
