@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace VisualReader
 {
-    public class ChapterDataRequest : IRequest<ChapterDataDto>
+    public class EditChapterData : IRequest<ChapterDataDto>
     {
         public Guid Id { get; set; }
         public string Ma { get; set; }
@@ -14,9 +14,9 @@ namespace VisualReader
         public DateTime CreatedUtc { get; set; }
         public DateTime UpdatedUtc { get; set; }
         public Chapter Chapter { get; }
-        private static Func<ChapterDataRequest, ChapterData> Converter = Projection.Compile();
+        private static Func<EditChapterData, ChapterData> Converter = Projection.Compile();
 
-        public static Expression<Func<ChapterDataRequest, ChapterData>> Projection
+        public static Expression<Func<EditChapterData, ChapterData>> Projection
         {
             get
             {
@@ -34,7 +34,7 @@ namespace VisualReader
             }
         }
 
-        public static ChapterData Create(ChapterDataRequest model)
+        public static ChapterData Edit(EditChapterData model)
         {
             if (model != null)
             {
