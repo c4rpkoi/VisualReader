@@ -1,10 +1,8 @@
-﻿using VisualReader.Application.TruyenManagers.Commands.Post;
-
-namespace VisualReader
+﻿namespace VisualReader
 {
     public interface IChapterDataService
     {
-        Task<SearchResponse<ChapterDataDto>> GetAllChapterDataAsync(GetAllChapterData request,CancellationToken cancellationToken);
+        Task<SearchResponse<ChapterDataDto>> GetAllChapterDataAsync(GetAllChapterData request, CancellationToken cancellationToken);
 
         Task<ChapterDataDto> GetChapterDataAsyn(Guid id, CancellationToken cancellationToken);
 

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System.Linq.Expressions;
 
-namespace VisualReader.Application.TruyenManagers.Commands.Post
+namespace VisualReader
 {
     public class ChapterDataRequest : IRequest<ChapterDataDto>
     {

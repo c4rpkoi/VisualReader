@@ -1,6 +1,4 @@
-﻿using VisualReader.Application.TruyenManagers.Commands.Post;
-
-namespace VisualReader
+﻿namespace VisualReader
 {
     public interface ITruyenService
     {
