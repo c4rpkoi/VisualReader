@@ -1,10 +1,5 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VisualReader
 {
@@ -18,13 +13,13 @@ namespace VisualReader
         public DateTime UpdateUCT { get; set; }
         public Chapter Chapters { get; set; }
         public User Users { get; set; }
-        private static Func<Bookmark, BookmarkDto> Converter = Projection.Compile();
+        private static Func<BookmarkRequest, Bookmark> Converter = Projection.Compile();
 
-        public static Expression<Func<Bookmark, BookmarkDto>> Projection
+        public static Expression<Func<BookmarkRequest, Bookmark>> Projection
         {
             get
             {
-                return entity => new BookmarkDto
+                return entity => new Bookmark
                 {
                     Id = entity.Id,
                     Users = entity.Users,
@@ -38,7 +33,7 @@ namespace VisualReader
             }
         }
 
-        public static BookmarkDto Create(Bookmark model)
+        public static Bookmark Create(BookmarkRequest model)
         {
             if (model != null)
             {

@@ -7,11 +7,11 @@ namespace VisualReader
     {
         //public IDictionaryRepository Dictionaries { get; private set; }
         public IUserRepository Users { get; private set; }
-        public IBookmarkRepository Bookmark { get; private set; }
-        public IBlockRepository Block { get; private set; }
-        public IReadingListItemRepository ReadingListItem { get; private set; }
-        public IReadingListRepository ReadingList { get; private set; }
-        public IFavoriteListRepository FavoriteList { get; private set; }
+        public IBookmarkRepository Bookmarks { get; private set; }
+        public IBlockRepository Blocks { get; private set; }
+        public IReadingListItemRepository ReadingListItems { get; private set; }
+        public IReadingListRepository ReadingLists { get; private set; }
+        public IFavoriteListRepository FavoriteLists { get; private set; }
         public ICommentRepository Comments { get; private set; }
         public IChapterDataRepository ChapterDatas { get; private set; }
         public IChapterRepository Chapters { get; private set; }
@@ -30,11 +30,11 @@ namespace VisualReader
         public UnitOfWork(IUserRepository users, IBookmarkRepository bookmark, IBlockRepository block, IReadingListItemRepository readingListItem, IReadingListRepository readingList, IFavoriteListRepository favoriteList, ICommentRepository comments, IChapterDataRepository chapterDatas, IChapterRepository chapters, ILoaiTruyenRepository loaiTruyens, ILoaiTruyenCuaTruyenRepository loaiTruyenCuaTruyens, ITacGiaRepository tacGias, ITacGiaTruyenRepository tacGiaTruyens, ITheLoaiRepository theLoais, ITheLoaiTruyenRepository theLoaiTruyens, ITruyenRepository truyens, VisualReaderDbContext context)
         {
             Users = users;
-            Bookmark = bookmark;
-            Block = block;
-            ReadingListItem = readingListItem;
-            ReadingList = readingList;
-            FavoriteList = favoriteList;
+            Bookmarks = bookmark;
+            Blocks = block;
+            ReadingListItems = readingListItem;
+            ReadingLists = readingList;
+            FavoriteLists = favoriteList;
             Comments = comments;
             ChapterDatas = chapterDatas;
             Chapters = chapters;

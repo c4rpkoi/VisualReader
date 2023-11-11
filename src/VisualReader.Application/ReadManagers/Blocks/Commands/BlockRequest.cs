@@ -17,13 +17,13 @@ namespace VisualReader
         public DateTime UpdateUCT { get; set; }
         public User Users { get; set; }
         public Truyen Truyens { get; set; }
-        private static Func<Block, BlockDto> Converter = Projection.Compile();
+        private static Func<BlockRequest, Block> Converter = Projection.Compile();
 
-        public static Expression<Func<Block, BlockDto>> Projection
+        public static Expression<Func<BlockRequest, Block>> Projection
         {
             get
             {
-                return entity => new BlockDto
+                return entity => new Block
                 {
                     Id = entity.Id,
                     CreateUCT = entity.CreateUCT,
@@ -36,7 +36,7 @@ namespace VisualReader
             }
         }
 
-        public static BlockDto Create(Block model)
+        public static Block Create(BlockRequest model)
         {
             if (model != null)
             {

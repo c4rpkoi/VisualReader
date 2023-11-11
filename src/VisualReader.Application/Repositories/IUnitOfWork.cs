@@ -3,11 +3,11 @@
     public interface IUnitOfWork
     {
         //IDictionaryRepository Dictionaries { get; }
-        IBookmarkRepository Bookmark { get; }
-        IBlockRepository Block { get; }
-        IReadingListItemRepository ReadingListItem { get; }
-        IReadingListRepository ReadingList { get; }
-        IFavoriteListRepository FavoriteList { get; }
+        IBookmarkRepository Bookmarks { get; }
+        IBlockRepository Blocks { get; }
+        IReadingListItemRepository ReadingListItems { get; }
+        IReadingListRepository ReadingLists { get; }
+        IFavoriteListRepository FavoriteLists { get; }
         ICommentRepository Comments { get; }
         IChapterDataRepository ChapterDatas { get; }
         IChapterRepository Chapters { get;   }

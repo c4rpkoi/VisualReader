@@ -1,10 +1,5 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VisualReader
 {
@@ -20,13 +15,13 @@ namespace VisualReader
         public DateTime UpdateUCT { get; set; }
         public ReadingList ReadingLists { get; set; }
         public Truyen Truyens { get; set; }
-        private static Func<ReadingListItem, ReadingListItemDto> Converter = Projection.Compile();
+        private static Func<ReadingListItemRequest, ReadingListItem> Converter = Projection.Compile();
 
-        public static Expression<Func<ReadingListItem, ReadingListItemDto>> Projection
+        public static Expression<Func<ReadingListItemRequest, ReadingListItem>> Projection
         {
             get
             {
-                return entity => new ReadingListItemDto
+                return entity => new ReadingListItem
                 {
                     Id = entity.Id,
                     IdUser = entity.IdUser,
@@ -42,7 +37,7 @@ namespace VisualReader
             }
         }
 
-        public static ReadingListItemDto Create(ReadingListItem model)
+        public static ReadingListItem Create(ReadingListItemRequest model)
         {
             if (model != null)
             {

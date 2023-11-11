@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using VisualReader.Application.Services;
 
 namespace VisualReader
 {
@@ -19,6 +20,11 @@ namespace VisualReader
             serviceCollection.AddScoped<IUserContext, UserContext>();
             serviceCollection.AddScoped<IUserService, UserService>();
             serviceCollection.AddScoped<ICommentService, CommentService>();
+            serviceCollection.AddScoped<IBlockService, BlockService>();
+            serviceCollection.AddScoped<IBookmarkservice, Bookmarkservice>();
+            serviceCollection.AddScoped<IFavoriteListService, FavoriteListService>();
+            serviceCollection.AddScoped<IReadingListItemService, ReadingListItemService>();
+            serviceCollection.AddScoped<IReadingListService, ReadingListService>();
 
             serviceCollection.AddSingleton<CacheOptions>(service =>
             {

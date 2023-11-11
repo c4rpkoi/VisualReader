@@ -16,13 +16,13 @@ namespace VisualReader
         public DateTime UpdateUCT { get; set; }
         public User Users { get; set; }
         public IEnumerable<ReadingListItem> readingListItems { get; set; }
-        private static Func<ReadingList, ReadingListDto> Converter = Projection.Compile();
+        private static Func<ReadingListRequest, ReadingList> Converter = Projection.Compile();
 
-        public static Expression<Func<ReadingList, ReadingListDto>> Projection
+        public static Expression<Func<ReadingListRequest, ReadingList>> Projection
         {
             get
             {
-                return entity => new ReadingListDto
+                return entity => new ReadingList
                 {
                     Id = entity.Id,
                     IdUser = entity.IdUser,
@@ -34,7 +34,7 @@ namespace VisualReader
             }
         }
 
-        public static ReadingListDto Create(ReadingList model)
+        public static ReadingList Create(ReadingListRequest model)
         {
             if (model != null)
             {

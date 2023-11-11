@@ -1,14 +1,9 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VisualReader
 {
-    public class FavoriteRequest : IRequest<FavoriteListDto>
+    public class FavoriteListRequest : IRequest<FavoriteListDto>
     {
         public Guid Id { get; set; }
         public Guid IdUser { get; set; }
@@ -17,13 +12,13 @@ namespace VisualReader
         public DateTime UpdateUCT { get; set; }
         public User Users { get; set; }
         public Truyen Truyens { get; set; }
-        private static Func<FavoriteList, FavoriteListDto> Converter = Projection.Compile();
+        private static Func<FavoriteListRequest, FavoriteList> Converter = Projection.Compile();
 
-        public static Expression<Func<FavoriteList, FavoriteListDto>> Projection
+        public static Expression<Func<FavoriteListRequest, FavoriteList>> Projection
         {
             get
             {
-                return entity => new FavoriteListDto
+                return entity => new FavoriteList
                 {
                     Id = entity.Id,
                     CreateUCT = entity.CreateUCT,
@@ -36,7 +31,7 @@ namespace VisualReader
             }
         }
 
-        public static FavoriteListDto Create(FavoriteList model)
+        public static FavoriteList Create(FavoriteListRequest model)
         {
             if (model != null)
             {
