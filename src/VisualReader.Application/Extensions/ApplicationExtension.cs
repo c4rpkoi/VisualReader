@@ -26,6 +26,16 @@ namespace VisualReader
             serviceCollection.AddScoped<IReadingListItemService, ReadingListItemService>();
             serviceCollection.AddScoped<IReadingListService, ReadingListService>();
 
+            serviceCollection.AddScoped<IChapterDataService, ChapterDataService>();
+            serviceCollection.AddScoped<IChapterService, ChapterService>();
+            serviceCollection.AddScoped<ILoaiTruyenService, LoaiTruyenService>();
+            serviceCollection.AddScoped<ILoaiTruyenCuaTruyenService, LoaiTruyenCuaTruyenService>();
+            serviceCollection.AddScoped<ITacGiaService, TacGiaService>();
+            serviceCollection.AddScoped<ITacGiaTruyenService, TacGiaTruyenService>();
+            serviceCollection.AddScoped<ITheLoaiService, TheLoaiService>();
+            serviceCollection.AddScoped<ITheLoaiTruyenService, TheLoaiTruyenService>();
+            serviceCollection.AddScoped<ITruyenService, TruyenService>();
+
             serviceCollection.AddSingleton<CacheOptions>(service =>
             {
                 var configuration = service.GetRequiredService<IConfiguration>();
